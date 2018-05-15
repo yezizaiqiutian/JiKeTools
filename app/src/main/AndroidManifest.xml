@@ -5,8 +5,11 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <!-- 网络状态权限 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!--读写sdk权限-->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!--相机权限-->
+    <uses-permission android:name="android.permission.CAMERA"/>
 
     <application
         android:name=".net.MyApplication"
@@ -28,6 +31,8 @@
         <activity android:name=".net.DownActivity">
         </activity>
         <activity android:name=".net.UpLoadActivity">
+        </activity>
+        <activity android:name=".camera.CameraActivity">
         </activity>
     </application>
 

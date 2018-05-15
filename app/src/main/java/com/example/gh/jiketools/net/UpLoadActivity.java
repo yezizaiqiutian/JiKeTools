@@ -42,17 +42,17 @@ public class UpLoadActivity extends BaseActivity {
     @BindView(R.id.id_iv_img)
     ImageView id_iv_img;
 
+    public static void actionStart(Context context) {
+        Intent intent = new Intent(context, UpLoadActivity.class);
+        context.startActivity(intent);
+    }
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload);
         ButterKnife.bind(this);
 
-    }
-
-    public static void actionStart(Context context) {
-        Intent intent = new Intent(context, UpLoadActivity.class);
-        context.startActivity(intent);
     }
 
     @OnClick(R.id.id_btn_upload)

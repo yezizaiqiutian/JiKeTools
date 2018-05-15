@@ -24,4 +24,10 @@
         android:layout_height="wrap_content"
         android:text="网络上传"/>
 
+    <Button
+        android:id="@+id/id_btn_tocamera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打开相机"/>
+
 </LinearLayout>
