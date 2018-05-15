@@ -1,0 +1,65 @@
+apply plugin: 'com.android.library'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+greendao {
+    schemaVersion 1
+    daoPackage 'com.gh.greendao'
+    targetGenDir 'src/main/java'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+
+    implementation rootProject.ext.dependencies.interceptor
+//    implementation rootProject.ext.dependencies.okhttp3
+    implementation rootProject.ext.dependencies.greendao
+    implementation rootProject.ext.dependencies.retrofitrxjava2
+    implementation rootProject.ext.dependencies.retrofit2
+    api rootProject.ext.dependencies.gson
+    api rootProject.ext.dependencies.rxlifecycle
+    api rootProject.ext.dependencies.rxlifecyclecomponents
+
+
+
+//    compile 'org.greenrobot:greendao:3.2.0'
+//    /*rx-android-java*/
+//    compile 'com.trello:rxlifecycle:1.0'
+//    compile 'com.trello:rxlifecycle-components:1.0'
+//    /*rotrofit*/
+//    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+//    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+//    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+//
+//    compile 'com.squareup.okhttp3:logging-interceptor:3.1.2'
+
+}
